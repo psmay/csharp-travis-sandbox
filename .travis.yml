@@ -9,22 +9,25 @@ env:
 
 language: csharp
 mono: latest
-dotnet: 2.2
+#dotnet: 2.2
 
 install:
-  - dotnet restore
+  - echo Hello
+  - sudo apt-cache policy
+  #- dotnet restore
 
 script:
-  - dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
-  - dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
+  - echo hi
+  #- dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
+  #- dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
 
-deploy:
-  - on:
-      branch: deploy-exp
-    skip_cleanup: true
-    provider: script
-    script:
-      - |
-        #bash scripts/install_mono_and_nuget.sh &&
-        bash scripts/documentation_all.sh
+#deploy:
+#  - on:
+#      branch: deploy-exp
+#    skip_cleanup: true
+#    provider: script
+#    script:
+#      - |
+#        #bash scripts/install_mono_and_nuget.sh &&
+#        bash scripts/documentation_all.sh
 
