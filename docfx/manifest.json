@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/mnt/c/Users/c-pmay/source/repos/csharp-travis-sandbox/docfx_project",
+  "source_base_path": "/home/travis/build/psmay/csharp-travis-sandbox/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,19 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "MDXRvfnKIyztnwjfqcHF2Q=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "eWl/m2iB2mgjZPbLc4xDqw=="
+          "hash": "WVp0Iq7/aOEqE8V/YvssaQ=="
         }
       },
       "is_incremental": false,
@@ -33,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "ftdK5K8XJ5c9icTplgMJJA=="
+          "hash": "LBkkYoU3w9y0y8rU9zOk3A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "AVHjhsxISYA8sgfsJ+dyUg=="
+          "hash": "IoKpiFPtCruuixszWMfmjg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+          "hash": "k7V/0exT3U0e8ltNoAiWPA=="
         }
       },
       "is_incremental": false,
@@ -79,25 +67,26 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build"
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing"
       },
       "processors": {}
