@@ -16,5 +16,5 @@ install:
 
 script:
 - dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
-- dotnet test Fibonacci.Tests/Fibonacci.Test.csproj
+- dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
 
