@@ -1,4 +1,4 @@
-dist: bionic
+dist: xenial
 
 env:
   global:
@@ -8,26 +8,23 @@ env:
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 
 language: csharp
-mono: latest
-#dotnet: 2.2
+mono: none
+dotnet: 2.2
 
 install:
-  - echo Hello
-  - sudo apt-cache policy
-  #- dotnet restore
+  - dotnet restore
 
 script:
-  - echo hi
-  #- dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
-  #- dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
+  - dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
+  - dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
 
-#deploy:
-#  - on:
-#      branch: deploy-exp
-#    skip_cleanup: true
-#    provider: script
-#    script:
-#      - |
-#        #bash scripts/install_mono_and_nuget.sh &&
-#        bash scripts/documentation_all.sh
+deploy:
+  - on:
+      branch: deploy-exp
+    skip_cleanup: true
+    provider: script
+    script:
+      - |
+        bash scripts/install_mono_and_nuget.sh &&
+        bash scripts/documentation_all.sh
 
