@@ -22,7 +22,9 @@ before_deploy:
   - on:
       branch: deploy-exp
     script:
-      - bash scripts/install_mono_and_nuget.sh
+      - 'bash --version && pwd && env'
+
+#      - bash scripts/install_mono_and_nuget.sh
 
 deploy:
   - on:
