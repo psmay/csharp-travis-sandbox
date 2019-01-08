@@ -18,12 +18,16 @@ script:
 - dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
 - dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
 
+before_deploy:
+  - on:
+      branch: deploy-exp
+    script:
+      - bash scripts/install_mono_and_nuget.sh
+
 deploy:
   - on:
       branch: deploy-exp
     skip_cleanup: true
     provider: script
-    before_install:
-      - bash scripts/install_mono_and_nuget.sh
     script:
       - bash scripts/documentation_all.sh
