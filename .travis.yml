@@ -21,6 +21,7 @@ script:
 before_deploy:
   - on:
       branch: deploy-exp
+    provider: script
     script:
       - 'bash --version && pwd && env'
 
