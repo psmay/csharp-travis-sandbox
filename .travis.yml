@@ -9,12 +9,20 @@ env:
 
 language: csharp
 mono: none
-dotnet: 2.2
+dotnet: 2.2.101
 
 install:
-- dotnet restore
+  - dotnet restore
 
 script:
-- dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
-- dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
+  - dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
+  - dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
+
+deploy:
+  - on:
+      branch: deploy-exp
+    skip_cleanup: true
+    provider: script
+    script:
+      - 'bash scripts/install_mono_and_nuget.sh && bash scripts/documentation_all.sh'
 
