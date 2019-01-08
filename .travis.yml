@@ -24,7 +24,5 @@ deploy:
     skip_cleanup: true
     provider: script
     script:
-      - |
-        bash scripts/install_mono_and_nuget.sh &&
-        bash scripts/documentation_all.sh
+      - 'bash scripts/install_mono_and_nuget.sh && bash scripts/documentation_all.sh'
 
