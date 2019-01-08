@@ -1,7 +1,19 @@
+dist: xenial
+
+env:
+  global:
+    - CONFIGURATION=Release
+    - VERSION_SUFFIX=aa-ci-$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
+    - DOTNET_CLI_TELEMETRY_OPTOUT=1
+    - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
+
 language: csharp
-solution: "./Fibonacci/Fibonacci.sln"
+mono: none
+dotnet: 2.1
+
 install:
-- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./Fibonacci/Fibonacci.sln
+- dotnet restore
+
 script:
-- xbuild ./Fibonacci/Fibonacci.sln
-- mono ./Fibonacci/packages/xunit.runner.console*/tools/xunit.console.exe ./Fibonacci/Fibonacci.Tests/bin/Debug/Fibonacci.Tests.dll
+- dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
+- dotnet test Fibonacci.Tests/Fibonacci.Test.csproj
