@@ -27,6 +27,12 @@ if [ "-$GITHUB_DOC_COMMIT_EMAIL-" = "--" ]; then
 	export GITHUB_DOC_COMMIT_EMAIL="travis_ci_build@invalid.invalid"
 fi
 
+git_commit_if_changed () {
+	# Prevent a failed exit if the repo turns out to be unchanged.
+	# https://stackoverflow.com/questions/8123674/how-to-git-commit-nothing-without-an-error
+	git diff-index --quiet HEAD || git commit "$@"
+}
+
 PAGES_BRANCH=gh-pages
 PAGES_REPO_DIR=pages_repo
 SITE_DEST_IN_REPO="$PAGES_REPO_DIR/docfx"
@@ -50,5 +56,5 @@ cp -a "$DOCFX_PROJECT_DIR/_site" $SITE_DEST_IN_REPO &&
 # Commit and push
 cd $PAGES_REPO_DIR &&
 git add -A &&
-git commit -m "Update from CI #$TRAVIS_BUILD_NUMBER, branch $TRAVIS_BRANCH" -q &&
+git_commit_if_changed -m "Update from CI #$TRAVIS_BUILD_NUMBER, branch $TRAVIS_BRANCH" -q &&
 git push origin $PAGES_BRANCH -q
