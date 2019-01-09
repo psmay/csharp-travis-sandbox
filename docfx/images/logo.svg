@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 13.405556 13.405555"
+   height="38pt"
+   width="38pt">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-283.59445)"
+     id="layer1">
+    <g
+       transform="translate(-0.04579524,0.69841156)"
+       aria-label="C"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Franklin Gothic Heavy';-inkscape-font-specification:'Franklin Gothic Heavy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332"
+       id="text4520">
+      <path
+         d="m 6.0077542,290.43339 1.9792073,0.11886 q -0.1395264,1.29707 -0.9611816,1.98954 -0.8164876,0.69246 -2.0102132,0.69246 -1.4366048,0 -2.3202717,-0.95084 -0.883667,-0.95085 -0.883667,-2.62517 0,-1.65881 0.8371582,-2.67684 0.8371582,-1.01802 2.3357747,-1.01802 1.4004312,0 2.1497395,0.77515 0.7544759,0.77514 0.8526611,2.05672 l -2.0205485,0.10852 q 0,-0.70797 -0.273885,-1.0232 -0.2687175,-0.31522 -0.6356201,-0.31522 -1.0231934,0 -1.0231934,2.05672 0,1.15238 0.2635498,1.5658 0.2687175,0.41341 0.7493083,0.41341 0.8578287,0 0.9611816,-1.16789 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Franklin Gothic Heavy';-inkscape-font-specification:'Franklin Gothic Heavy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;stroke:#000000;stroke-width:0.26458332"
+         id="path4532" />
+    </g>
+    <g
+       transform="translate(-0.04579524,0.69841156)"
+       aria-label="T"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Franklin Gothic Heavy';-inkscape-font-specification:'Franklin Gothic Heavy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26458332"
+       id="text4524">
+      <path
+         d="m 10.223075,287.85623 v 5.36402 H 8.1715203 v -5.36402 H 6.7090774 v -1.68982 h 4.9764406 v 1.68982 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Franklin Gothic Heavy';-inkscape-font-specification:'Franklin Gothic Heavy, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:#000000;stroke-width:0.26458332"
+         id="path4535" />
+    </g>
+  </g>
+</svg>
