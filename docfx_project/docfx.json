@@ -50,6 +50,11 @@
     ],
     "dest": "_site",
     "globalMetadataFiles": [],
+    "globalMetadata": {
+      "_appTitle": "This is the _appTitle value",
+      "_appLogoPath": "images/logo.svg",
+      "_appFaviconPath": "images/favicon.ico"
+    },
     "fileMetadataFiles": [],
     "template": [
       "default"
