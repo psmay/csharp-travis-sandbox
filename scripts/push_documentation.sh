@@ -30,7 +30,13 @@ fi
 git_commit_if_changed () {
 	# Prevent a failed exit if the repo turns out to be unchanged.
 	# https://stackoverflow.com/questions/8123674/how-to-git-commit-nothing-without-an-error
-	git diff-index --quiet HEAD || git commit "$@"
+	(
+		git diff-index --quiet HEAD &&
+		echo 'No changes detected; skipping commit.' >&2
+	) || (
+		echo 'Changes detected; proceeding with commit.' >&2 &&
+		git commit "$@"
+	)
 }
 
 PAGES_BRANCH=gh-pages
