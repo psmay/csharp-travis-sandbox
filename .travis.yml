@@ -22,7 +22,7 @@ script:
 
 deploy:
   - on:
-      branch: doc-exp-0
+      branch: script-functions
     skip_cleanup: true
     provider: script
     script:
