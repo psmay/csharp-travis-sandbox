@@ -48,9 +48,9 @@ DOC_PUSH_TEMP_DIR="`mktemp -d`" &&
 	(
 		cd $PAGES_REPO_DIR &&
 		find -maxdepth 1 -type d -not -name '.*' -exec rm -rf {} \; &&
-		rm -rf *.html *.json *.yml *.svg *.ico &&
+		rm -rf *.html *.json *.yml *.svg *.ico
 	) &&
-	cp -a "$DOCFX_PROJECT_DIR/_site" "$PAGES_REPO_DIR" &&
+	rsync -av "$DOCFX_PROJECT_DIR/_site/" "$PAGES_REPO_DIR/" &&
 
 	# Commit and push
 	(
