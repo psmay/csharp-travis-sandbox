@@ -22,7 +22,7 @@ script:
 
 deploy:
   - on:
-      branch: master
+      branch: fix-doc-mistake
     skip_cleanup: true
     provider: script
     script:
