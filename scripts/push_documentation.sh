@@ -23,7 +23,8 @@ git_commit_if_changed () {
 	)
 }
 
-SITE_DEST_IN_REPO="$PAGES_REPO_DIR/docfx"
+# Applies if the site will be at the root
+#SITE_DEST_IN_REPO="$PAGES_REPO_DIR/docfx"
 
 GITHUB_DOC_REPO_URL_WITH_TOKEN="https://$GITHUB_DOC_REPO_OWNER:$GITHUB_DOC_GENERATION_TOKEN@github.com/$GITHUB_DOC_REPO_OWNER/$GITHUB_DOC_REPO.git"
 
@@ -39,9 +40,17 @@ DOC_PUSH_TEMP_DIR="`mktemp -d`" &&
 		git config user.name "$GITHUB_DOC_COMMIT_USER"
 	) &&
 
-	# Clobber existing site dir and replace with new one
-	rm -rf $SITE_DEST_IN_REPO &&
-	cp -a "$DOCFX_PROJECT_DIR/_site" $SITE_DEST_IN_REPO &&
+	# If under root: Clobber existing site dir and replace with new one
+	#rm -rf $SITE_DEST_IN_REPO &&
+	#cp -a "$DOCFX_PROJECT_DIR/_site" "$SITE_DEST_IN_REPO" &&
+
+	# If at root: Clobber conservatively in order to preserve CNAME, .git, and whatever else might show up
+	(
+		cd $PAGES_REPO_DIR &&
+		find -maxdepth 1 -type d -not -name '.*' -exec rm -rf {} \; &&
+		rm -rf *.html *.json *.yml *.svg *.ico &&
+	) &&
+	cp -a "$DOCFX_PROJECT_DIR/_site" "$PAGES_REPO_DIR" &&
 
 	# Commit and push
 	(
