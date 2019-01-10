@@ -17,7 +17,6 @@ install:
   - dotnet restore
 
 script:
-  - echo The vsx is $VERSION_SUFFIX
   - dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
   - dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
 
