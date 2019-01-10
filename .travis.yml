@@ -3,7 +3,8 @@ dist: xenial
 env:
   global:
     - CONFIGURATION=Release
-    - VERSION_SUFFIX=aa-ci-$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER
+    - BUILD_NUMBER_ZERO_PAD="`printf '%08d' $TRAVIS_BUILD_NUMBER`"
+    - VERSION_SUFFIX=aa-ci-$TRAVIS_BRANCH-$BUILD_NUMBER_ZERO_PAD
     - DOTNET_CLI_TELEMETRY_OPTOUT=1
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
     - GITHUB_DOC_REPO_OWNER=psmay
@@ -17,6 +18,7 @@ install:
   - dotnet restore
 
 script:
+  - echo The vs is $VERSION_SUFFIX
   - dotnet build -c $CONFIGURATION --version-suffix $VERSION_SUFFIX
   - dotnet test Fibonacci.Tests/Fibonacci.Tests.csproj
 
