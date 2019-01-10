@@ -3,5 +3,3 @@
 - name: Api Documentation
   href: api/
   homepage: api/index.md
-- name: View on GitHub
-  href: https://github.com/psmay/csharp-travis-sandbox

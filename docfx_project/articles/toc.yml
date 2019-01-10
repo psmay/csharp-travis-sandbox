@@ -1,6 +1,2 @@
-- name: Big List Heading
-  items:
-  - name: First thing in toc
-    href: intro.md
-  - name: First subthing in toc
-    href: xyzzy.md
+- name: Introduction
+  href: intro.md
